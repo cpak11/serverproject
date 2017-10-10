@@ -1,10 +1,16 @@
 const express = require('express'),
 	bodyParser = require('body-parser'),
+	session = require('express-session'),
 	massive = require('massive');
 
 const app = express();
 
 app.use(bodyParser.json());
+app.use(session({
+	secret: 'devmountainsecret',
+	saveUninitialized: false,
+	resave: false
+}));
 
 
 
