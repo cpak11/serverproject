@@ -11,7 +11,7 @@ app.use(session({
 	saveUninitialized: true,
 	resave: false
 }));
-
+// app.use(express.static(path.join(__dirname, 'public')));
 
 // massive({
 // 	host: 'localhost',
@@ -46,7 +46,7 @@ app.post('/api/members', function(req, res, next){
 		req.body.gender,
 		req.body.email,
 		req.body.phone_number
-	]).then(response => res.json(response))
+	]).then(response => res.json(response));
 });
 app.delete('/api/members/:id', function(req, res, next){
 	req.app.get('db').deletemember(req.params.id)

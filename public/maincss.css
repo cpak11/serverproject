@@ -1,0 +1,28 @@
+
+
+a{text-decoration:none;color:inherit;}
+input{outline:none;}
+
+
+#framemain,#frameintro,footer{position:relative;width:100%;}
+
+
+
+
+@media(max-width:420px){
+
+	#frameintro{height:400px;
+		background-image:linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.2)),url(src/media/imgs/qvqv.jpg);
+		background-size:cover;background-position:0 0;
+	}
+	#frameintro p{margin:0;}
+
+
+
+
+	#formsignup {}
+	#formsignup input[type="text"]{width:80vw;}
+
+	/*.ffiller{height:500vh;}*/
+}
+
