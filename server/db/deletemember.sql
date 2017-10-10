@@ -1,0 +1,1 @@
+delete from qv_members where id = $1;
