@@ -3,10 +3,11 @@ angular.module('quovadis', ['ui.router']).config(function($stateProvider, $urlRo
 	$urlRouterProvider.otherwise('/');
 
 	$stateProvider
-	.state('home', {
-		url: '',
-		templateUrl: ''
+	.state('about', {
+		url: '/',
+		templateUrl: '/src/components/about/about.html',
+		controller: 'aboutCtrl'
 	})
-	.state();
+	
 
 });
