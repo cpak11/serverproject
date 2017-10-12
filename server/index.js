@@ -1,4 +1,4 @@
-const express = require('express'),
+const express = require('express');
 	bodyParser = require('body-parser'),
 	session = require('express-session'),
 	massive = require('massive');
@@ -15,7 +15,8 @@ app.use(session({
 	resave: false
 }));
 
-app.use(express.static(`${__dirname}/../public`));
+// app.use(express.static(`${__dirname}/../public`));
+app.use('/', express.static(__dirname + '/../public'));
 
 // massive({
 // 	host: 'localhost',
@@ -88,8 +89,7 @@ app.get('/api/member/:id', ( req, res, next ) => {
 });
 app.post('/api/member', ( req, res, next ) => {
 	const dbInstance = req.app.get('db');
-	const { first_name, last_name, gender, email, phone_number } = req.body;
-	dbInstance.addmember([ first_name, last_name, gender, email, phone_number ])
+	dbInstance.addmember(req.body)
 	.then( () => res.status(200).send() )
 	.catch( () => res.status(500).send() );
 });
@@ -100,10 +100,6 @@ app.delete('/api/member/:id', ( req, res, next ) => {
 	.then( () => res.status(200).send() )
 	.catch( () => res.status(500).send() );
 });
-
-
-
-
 
 
 

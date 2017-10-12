@@ -1,5 +1,6 @@
 angular.module('quovadis').service('aboutServ', function($http){
 
+
 	this.getallmembers = function(){
 		return $http({
 			method: 'GET',

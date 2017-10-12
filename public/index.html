@@ -18,7 +18,6 @@
 				<span><a href="#formsignup">signup</a></span>
 			</p>
 		</header>
-		test text for testing purposes... lets go!
 	</div>
 
 
@@ -31,14 +30,40 @@
 
 
 
-	<footer>
-		<form id="formsignup">
-			<input type="text" name="firstname" placeholder="first name"><br>
-			<input type="text" name="lastname" placeholder="last name"><br>
-			<input type="text" name="email" placeholder="email"><br>
-			<input type="radio" name="gender" value="male"> male
-			<input type="radio" name="gender" value="female"> female<br>
+	<footer ng-controller="formCtrl">
+
+		<form id="formsignup" name="newmemberform">
+			<input type="text" name="firstname" placeholder="first name" ng-model="firstname" required><br>
+			<input type="text" name="lastname" placeholder="last name" ng-model="lastname" required><br>
+			<input type="text" name="email" placeholder="email" ng-model="email" required><br>
+			<select name="gender" required ng-model="gender" placeholder="gender">
+				<option value="female">female</option>
+				<option value="male">male</option>
+			</select><br>
+			<input type="text" name="phonenumber" placeholder="phone number" ng-model="phonenumber" required><br>
+			<button type="submit"
+			ng-disabled="form.$invalid"
+			ng-click="addnewmember(
+			firstname,
+			lastname,
+			email,
+			gender,
+			phonenumber
+			)">add new member</button>
 		</form>
+
+		<form>
+			<input placeholder="member id" ng-model="dm.id">
+		
+			<button type="submit" ng-click="deletemember(dm)">delete member</button>
+		</form>
+
+
+
+
+
+
+
 	</footer>
 </div>
 	
@@ -48,10 +73,12 @@
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+<script src="mainjs.js"></script>
 <script src="/src/app.js"></script>
+<script src="/src/components/form/formCtrl.js"></script>
+<script src="/src/components/form/formServ.js"></script>
 <script src="/src/components/about/aboutCtrl.js"></script>
 <script src="/src/components/about/aboutServ.js"></script>
-<script src=""></script>
 <script src=""></script>
 <script src=""></script>
 <script src=""></script>

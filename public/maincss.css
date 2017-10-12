@@ -22,6 +22,7 @@ input{outline:none;}
 
 	#formsignup {}
 	#formsignup input[type="text"]{width:80vw;}
+	input:focus[placeholder]{font-size:2px;}
 
 	/*.ffiller{height:500vh;}*/
 }
