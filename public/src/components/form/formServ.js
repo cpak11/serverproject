@@ -14,10 +14,7 @@ angular.module('quovadis').service('formServ', function($http){
 	}
 
 	this.delmember = (dm) => {
-		let delm = [dm];
-		$http.delete('/api/member/:id', delm);
-
-	
+		$http.delete('/api/member/' + dm);
 	};
 
 })
