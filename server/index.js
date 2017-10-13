@@ -1,7 +1,8 @@
 const express = require('express');
 	bodyParser = require('body-parser'),
 	session = require('express-session'),
-	massive = require('massive');
+	massive = require('massive'),
+	stripe = require('stripe')('sk_test_xjDNPn1orZoxz7Vdxstmxd8z');
 
 const connectionString = 'postgres://postgres:devmountain@localhost/quovadis';
 
@@ -96,6 +97,7 @@ app.post('/api/member', ( req, res, next ) => {
 app.delete('/api/member/:id', ( req, res, next ) => {
 	const dbInstance = req.app.get('db');
 	const { params } = req;
+	console.log(req.params)
 	dbInstance.deletemember([ params.id ])
 	.then( () => res.status(200).send() )
 	.catch( () => res.status(500).send() );

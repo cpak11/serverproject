@@ -5,8 +5,13 @@ angular.module('quovadis', ['ui.router']).config(function($stateProvider, $urlRo
 	$stateProvider
 	.state('about', {
 		url: '/',
-		templateUrl: '/src/components/about/about.html',
-		controller: 'aboutCtrl'
+		views: {
+			'about-view': {
+				templateUrl: '/src/components/about/about-currentmembers.html',
+				controller: 'aboutCtrl'
+			}
+		}
+		
 	})
 	
 

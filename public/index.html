@@ -2,35 +2,124 @@
 <html ng-app="quovadis">
 <head>
 	<title>quoVadis | </title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+	
 	<link rel="stylesheet" href="maincss.css">
 	<link rel="stylesheet" href="">
 	<link rel="stylesheet" href="">
 	<link rel="stylesheet" href="">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Slabo+27px" rel="stylesheet">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+<nav id="fixednav">
+	<div class="navmenu">		
+		<h3>menu</h3>
+		<div class="linkanchors">
+			<p><a href="javascript:void(0)">link 1</a></p>
+			<p><a href="javascript:void(0)">link two</a></p>
+		</div>
+	</div>
+
+</nav>
+
 <div id="framemain">
+
+
+
+
+
+
 	<div id="frameintro">
-		<header>
-			<p>
-				<span><a href="javascript:void(0)" ng-click="vm.openModal('custom-modal-1')">login</a></span> |
-				<span><a href="#formsignup">signup</a></span>
-			</p>
-		</header>
+		<h1>
+			<span class="letteranimate ih11">w</span>here a<span class="letteranimate ih22">r</span>e
+			<br>
+			&nbspyo<span class="letteranimate ih33">u</span>
+			<br>going...?
+		</h1>
+
+		<div class="imgholder">
+			<ul>
+				<li><span class="ih1"></span></li>
+				<li><span class="ih2"></span></li>
+				<li><span class="ih3"></span></li>
+			</ul>
+			
+		</div>
+
+		<div class="introfooter"></div>
 	</div>
 
 
 
-	<!-- <div class="ffiller"></div> -->
 
 
 
-	<ui-view></ui-view>
+	<div id="frameverse">
+		<div class="versetext">
+			<h3>verse 1:11</h3>
+			<p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend making this the first true generator on the Internet.</p>
+		</div>
+	</div>
+
+	<div id="frameabout">
+		<div ui-view="about-view"></div>
+	</div>
+
+	<div id="frameservice">service to community</div>
+
+	<div id="framemedia">media</div>
+
+	<div id="framecontact">contact</div>
 
 
 
-	<footer ng-controller="formCtrl">
+
+
+	<!-- <div id="frameintro">
+		<ul class="cb-slideshow">
+			<li>
+				<span>Image 01</span>
+				<div>
+					<h3></h3>
+				</div>
+			</li>
+			<li>
+				<span>Image 01</span>
+				<div>
+					<h3></h3>
+				</div>
+			</li>
+			<li>
+				<span>Image 01</span>
+				<div>
+					<h3></h3>
+				</div>
+			</li>
+			<li>
+				<span>Image 01</span>
+				<div>
+					<h3></h3>
+				</div>
+			</li>
+			<li>
+				<span>Image 01</span>
+				<div>
+					<h3></h3>
+				</div>
+			</li>
+			<li>
+				<span>Image 01</span>
+				<div>
+					<h3></h3>
+				</div>
+			</li>
+		</ul>
+	</div> -->
+	<!-- <footer ng-controller="formCtrl">
+		<div ui-view></div>
 
 		<form id="formsignup" name="newmemberform">
 			<input type="text" name="firstname" placeholder="first name" ng-model="firstname" required><br>
@@ -57,14 +146,8 @@
 
 			<button type="submit" ng-click="deletemember(dm)">delete member</button>
 		</form>
-
-
-
-
-
-
-
-	</footer>
+	</footer> -->
+	
 </div>
 	
 
