@@ -1,0 +1,76 @@
+/* ------------------- mediaquery ------------------- */
+@media(min-width:420px){
+
+	#fixednav{
+	position:fixed;top:0;left:100vw;
+	box-sizing:border-box;
+	width:50vw;height:100vh;
+	z-index:200;
+	background:rgba(200,200,200,.8);
+	border-left:3px solid white;
+	overflow:visible;
+	transition:transform 200ms ease-in-out;
+	}
+		#menuactivate{
+			z-index:210;
+			position:absolute;left:-30px;top:0;
+			width:30px;height:30px;
+			cursor:pointer;
+		}
+
+		.class2act{
+			transform: translate(-50vw);
+		}
+
+
+
+
+
+
+	#frameabout{		
+		background:silver;
+		/*z-index:-100;*/
+	}
+		.whitefilter{
+			display:none;
+			z-index:4;
+			position:absolute;top:0;left:0;
+			width:100%;height:100vh;background:rgba(235,235,235,.5);
+	}
+		.whereareyou{
+			font-size:8rem;
+			font-family:'Roboto Mono',monospace;
+			line-height:250px;letter-spacing:4px;
+			position:absolute;top:50%;transform:translateY(-50%);
+			z-index:7;
+		}
+		.wherecolor{color:rgba(205,5,15,.6)}
+		.letteranimate{transition:color 100ms ease-out,transform 200ms ease-in;}
+		.triggerletteranimate{
+			color:rgba(205,5,15,.7);
+			transform:translateY(-1.7rem);
+		}
+		.imgholder{
+			width:500px;height:650px;
+			position:absolute;z-index:5;
+			top:50%;
+			left:50%;transform:translate(-50%,-50%);
+		}
+			.imgholder ul li span{opacity:.8;}
+			.imgholder ul li:nth-child(1) span{background:url(/src/media/imgs/qvs.jpg);}
+			.imgholder ul li:nth-child(2) span{background:url(/src/media/imgs/qvqv.jpg);}
+			.imgholder ul li:nth-child(3) span{background:url(/src/media/imgs/qqv.jpg);}
+		.qvtitle{
+			position:absolute;top:50%;transform:translateY(-50%);
+			font-size:10rem;line-height:140px;z-index:8;
+			color:rgba(255,255,255,.7);
+			text-shadow:1px 1px 7px rgba(70,70,70,.3);
+		}
+
+		.versetext h3{font-size:3rem;}
+		.versetext p{font-size:1.5rem;}
+
+
+
+}
+/* ------------------- end mediaquery ------------------- */

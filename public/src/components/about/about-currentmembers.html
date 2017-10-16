@@ -1,7 +1,12 @@
 
+<div id="aboutdiv">
+	<form-direct></form-direct>
+	<h2 class="membertitle">Current Members</h2>
+	<div ng-repeat="member in members" ng-hide="member.first_name == null">
 
-<div ng-repeat="member in members" ng-hide="member.first_name == null">
-	<h2>{{member.first_name}} {{member.last_name}}</h2>
-	<p></p>
+		<p class="currentmember">{{member.first_name}} {{member.last_name}} - (id: {{member.id}})</p>
+
+	</div>
 </div>
+
 
