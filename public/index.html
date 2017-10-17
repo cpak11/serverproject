@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="">
 	<link rel="stylesheet" href="">
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Slabo+27px|Bungee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Bungee|Raleway" rel="stylesheet">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -22,9 +22,9 @@
 <nav id="fixednav">
 	<div id="menuactivate">
 		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-	    <path d="M0 0h24v24H0z" fill="none"/>
-	    <path d="M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"/>
-	</svg>
+		    <path d="M0 0h24v24H0z" fill="none"/>
+		    <path d="M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"/>
+		</svg>
 	</div>
 </nav>
 
@@ -38,10 +38,10 @@
 	<div id="frameintro">
 		<div class="whitefilter"></div>
 		<h1 class="whereareyou">
-			<span class="letteranimate ih11">w</span>here a<span class="letteranimate ih22">r</span>e
-			<br>
-			&nbspyo<span class="letteranimate ih33">u</span>
-			<br><span class="wherecolor">going...?</span>
+			<span class="letteranimate ih11">w</span>here<br>
+			a<span class="letteranimate ih22">r</span>e<br>
+			&nbspyo<span class="letteranimate ih33">u</span><br><div class="fillerheight"></div>
+			<span class="wherecolor">going...?</span>
 		</h1>
 
 		<h1 class="qvtitle">QUO<br>VADIS</h1>
@@ -79,25 +79,7 @@
 			<p>To most, "where are you going?" is just a question, to us it is a phrase that we are humbled by.</p>
 			
 			<div id="aboutform">					
-				<form id="formsignup" name="newmemberform">
-					<input type="text" name="firstname" placeholder="first name" ng-model="firstname" required><br>
-					<input type="text" name="lastname" placeholder="last name" ng-model="lastname" required><br>
-					<input type="text" name="email" placeholder="email" ng-model="email" required><br>
-					<select name="gender" required ng-model="gender" placeholder="gender">
-						<option value="female">female</option>
-						<option value="male">male</option>
-					</select><br>
-					<input type="text" name="phonenumber" placeholder="phone number" ng-model="phonenumber" required><br>
-					<button type="submit"
-					ng-disabled="form.$invalid"
-					ng-click="addnewmember(
-					firstname,
-					lastname,
-					email,
-					gender,
-					phonenumber
-					)">add new member</button>
-				</form>
+				
 
 				<form>
 					<input placeholder="member id" ng-model="dm">
@@ -120,88 +102,115 @@
 
 	<div id="frameservice">
 		<div id="scheduledevents">
+			<div class="inner">
+				<h3 class="divtitle">scheduled events</h3>
+				<dl>
 
-			<h3 class="divtitle">scheduled events</h3>
-			<dl>
+					<dt>
+						<h4>11/11 | Two day missions trip to Philadelphia</h4>
+					</dt>
+					<dd>
+						<ul>
+							<li>
+								<p>Will be meeting up at 7 a.m. in front of Centreville Sunoco.</p>
+							</li>
+							<li>
+								<p>Coffee and donuts will be provided (DD of course).</p>
+							</li>
+							<li>
+								<p>Please provide a notice two days in advanced if possible.</p>
+							</li>
+						</ul>
+					</dd>
 
-				<dt>
-					<h4>11/11 | Two day missions trip to Philadelphia</h4>
-				</dt>
-				<dd>
-					<ul>
-						<li>
-							Will be meeting up at 7 a.m. in front of Centreville Sunoco.
-						</li>
-						<li>
-							Coffee and donuts will be provided (DD of course).
-						</li>
-						<li>
-							Please provide a notice two days in advanced if possible.
-						</li>
-					</ul>
-				</dd>
+					<dt>
+						<h4>11/11 | Two day missions trip to Philadelphia</h4>
+					</dt>
+					<dd>
+						<ul>
+							<li>
+								<p>Will be meeting up at 7 a.m. in front of Centreville Sunoco.</p>
+							</li>
+							<li>
+								<p>Coffee and donuts will be provided (DD of course).</p>
+							</li>
+							<li>
+								<p>Please provide a notice two days in advanced if possible.</p>
+							</li>
+						</ul>
+					</dd>
 
-				<dt>
-					<h4>11/11 | Two day missions trip to Philadelphia</h4>
-				</dt>
-				<dd>
-					<ul>
-						<li>
-							Will be meeting up at 7 a.m. in front of Centreville Sunoco.
-						</li>
-						<li>
-							Coffee and donuts will be provided (DD of course).
-						</li>
-						<li>
-							Please provide a notice two days in advanced if possible.
-						</li>
-					</ul>
-				</dd>
+					<dt>
+						<h4>11/11 | Two day missions trip to Philadelphia</h4>
+					</dt>
+					<dd>
+						<ul>
+							<li>
+								<p>Will be meeting up at 7 a.m. in front of Centreville Sunoco.</p>
+							</li>
+							<li>
+								<p>Coffee and donuts will be provided (DD of course).</p>
+							</li>
+							<li>
+								<p>Please provide a notice two days in advanced if possible.</p>
+							</li>
+						</ul>
+					</dd>
 
-				<dt>
-					<h4>11/11 | Two day missions trip to Philadelphia</h4>
-				</dt>
-				<dd>
-					<ul>
-						<li>
-							Will be meeting up at 7 a.m. in front of Centreville Sunoco.
-						</li>
-						<li>
-							Coffee and donuts will be provided (DD of course).
-						</li>
-						<li>
-							Please provide a notice two days in advanced if possible.
-						</li>
-					</ul>
-				</dd>
+					<dt>
+						<h4>11/11 | Two day missions trip to Philadelphia</h4>
+					</dt>
+					<dd>
+						<ul>
+							<li>
+								<p>Will be meeting up at 7 a.m. in front of Centreville Sunoco.</p>
+							</li>
+							<li>
+								<p>Coffee and donuts will be provided (DD of course).</p>
+							</li>
+							<li>
+								<p>Please provide a notice two days in advanced if possible.</p>
+							</li>
+						</ul>
+					</dd>
 
-				<dt>
-					<h4>11/11 | Two day missions trip to Philadelphia</h4>
-				</dt>
-				<dd>
-					<ul>
-						<li>
-							Will be meeting up at 7 a.m. in front of Centreville Sunoco.
-						</li>
-						<li>
-							Coffee and donuts will be provided (DD of course).
-						</li>
-						<li>
-							Please provide a notice two days in advanced if possible.
-						</li>
-					</ul>
-				</dd>
+				</dl>
+			</div>
 
-			</dl>
+			
 		</div>
 	</div>
 
 
 
 	<div id="framecontact">
-		<h2>Connect <small>with us</small></h2>
-		
-		
+		<div class="cc">
+			<h1>CONNECT<br><small>with quoVadis</small></h1>
+
+			<form id="formsignup" name="newmemberform">
+				<input type="text" name="firstname" placeholder="first name" ng-model="firstname" required><br>
+				<input type="text" name="lastname" placeholder="last name" ng-model="lastname" required><br>
+				<input type="text" name="email" placeholder="email" ng-model="email" required><br>
+				<select name="gender" required ng-model="gender" placeholder="gender">
+					<option value="female">female</option>
+					<option value="male">male</option>
+				</select><br>
+				<input type="text" name="phonenumber" placeholder="phone number" ng-model="phonenumber"><br>
+				<p>not required</p>
+				<br>
+				<button type="submit"
+				ng-disabled="form.$invalid"
+				ng-click="addnewmember(
+				firstname,
+				lastname,
+				email,
+				gender,
+				phonenumber
+				)">join us</button>
+			</form>
+
+		</div>
+
 	</div>
 
 
