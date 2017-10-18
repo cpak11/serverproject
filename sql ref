@@ -7,6 +7,9 @@ CREATE TABLE Movie (
 
 INSERT INTO Movie ( Title, MediaTypeId ) VALUES ( "Aladdin", 3 );
 
+ALTER TABLE table_name
+  ADD column_name column-definition;
+
 ALTER TABLE Movie ADD COLUMN GenreId INTEGER REFERENCES Genre(GenreId); -- add foreign key to existing table
 
 UPDATE Movie SET GenreId=22 WHERE id=1; -- update entry

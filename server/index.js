@@ -1,13 +1,11 @@
 const express = require('express');
 	bodyParser = require('body-parser'),
 	session = require('express-session'),
-	massive = require('massive'),
-	stripe = require('stripe')('sk_test_xjDNPn1orZoxz7Vdxstmxd8z');
+	massive = require('massive');
 
 const connectionString = 'postgres://postgres:devmountain@localhost/quovadis';
 
 const app = express();
-
 
 app.use(bodyParser.json());
 app.use(session({
@@ -102,6 +100,19 @@ app.delete('/api/member/:id', ( req, res, next ) => {
 	.then( () => res.status(200).send() )
 	.catch( () => res.status(500).send() );
 });
+
+
+
+app.post('/api/donations', (req, res, next) => {
+	const dbInstance = req.app.get('db');
+	dbInstance.adddonationitem(req.body)
+	.then( () => res.status(200).send() )
+	.catch( () => res.status(500).send() );
+});
+
+
+
+
 
 
 

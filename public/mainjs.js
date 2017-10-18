@@ -44,7 +44,21 @@ $(function(){
 
 
 
+	var servicedd = $('#scheduledevents dd');
+
+	servicedd.hide();
+	$('#scheduledevents dt').on('click', function(){
+		$(this).next('dd').slideToggle(100);
+	});
 
 
+
+	$('.donate').on('click', function(e){
+		$('#donatemodal').fadeIn();
+		// if(e.currentTarget != $('#donatemodal')){
+		// 	$('#donatemodal').fadeOut();
+		// }
+	});
+	
 
 });
