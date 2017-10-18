@@ -13,7 +13,7 @@ angular.module('quovadis', ['ui.router']).config(function($stateProvider, $urlRo
 	// 	}
 		
 	// })
-	.state('addamount', {
+	.state('state1', {
 		url: '/',
 		views: {
 			'donate-view': {
@@ -21,7 +21,7 @@ angular.module('quovadis', ['ui.router']).config(function($stateProvider, $urlRo
 			}
 		}
 	})
-	.state('additem', {
+	.state('state2', {
 		url: '/',
 		views: {
 			'donate-view': {
