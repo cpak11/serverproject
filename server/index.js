@@ -106,7 +106,8 @@ app.post('/api/update/member/',(req, res, next) =>{
 	.then(response => {return res.json(response)})
 	.catch( () => res.status(500).send() );
 });
-app.post('/api/updateemail/member/',(req, res, next) =>{
+app.post('/api/updateEmail/member/',(req, res, next) =>{
+	console.log(req.body)
 	const dbInstance = req.app.get('db');
 	dbInstance.updateemail(req.body)
 	.then( response => {return res.json(response)} )
@@ -114,7 +115,7 @@ app.post('/api/updateemail/member/',(req, res, next) =>{
 });
 app.post('/api/updatephone/member/',(req, res, next) =>{
 	const dbInstance = req.app.get('db');
-	dbInstance.updatephonenumber(req.body)
+	dbInstance.updatephone(req.body)
 	.then( response => {return res.json(response)} )
 	.catch( () => res.status(500).send() );
 });

@@ -18,14 +18,38 @@
 
 
 <div id="fixednav420">
+	<div id="fixednav420arrow">
+		<svg fill="#FFFFFF" height="80" viewBox="0 0 24 24" width="80" xmlns="http://www.w3.org/2000/svg">
+		    <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+		    <path d="M0-.75h24v24H0z" fill="none"/>
+		</svg>
+	</div>
 
-	about
+	<div id="fixednav420admin">
+		<p>
+			password: <input id="pwpw" type="password" name="">
+			<button type="submit" ng-click="showframeadmin()">submit</button>
+		</p>
 
-	service/events
+	</div>
 
-	connect
+	<div class="linktext abmid">
+		<p>
+			<span>
+				<a href="#frameabout" target="_self">quoVadis?</a>
+			</span>
 
-	admin?
+			<span>
+				<a href="#frameservice" target="_self">service/events</a>
+			</span>
+
+			<span>
+				<a href="#framecontact" target="_self">connect</a>
+			</span>
+			
+			| <span class="adminlink">admin?</span>
+		</p>
+	</div>
 	
 </div>
 
@@ -34,12 +58,32 @@
 
 
 <nav id="fixednav">
+	<div class="closenav">close</div>
 	<div id="menuactivate">
 		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 		    <path d="M0 0h24v24H0z" fill="none"/>
 		    <path d="M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"/>
 		</svg>
 	</div>
+
+	<div class="linktext abmid">
+		<p>
+			<span>
+				<a href="#frameabout" target="_self">quoVadis?</a>
+			</span>
+			
+			<span>
+				<a href="#frameservice" target="_self">service/events</a>
+			</span>
+			
+			<span>
+				<a href="#framecontact" target="_self">connect</a>
+			</span>
+
+			<span class="adminlink">admin?</span>
+		</p>
+	</div>
+
 </nav>
 
 
@@ -87,10 +131,13 @@
 
 	<div id="frameabout">
 		<div id="aboutframe">
-			<h3>Quo Vadis</h3>
-			<p>A Latin phrase meaning "Where are you going?"</p>
-			<p>Modern usage of the phrase refers to the strength, courage, and dedication of Saint Peter and his journey to spread the message of Jesus.</p>
-			<p>To most, "where are you going?" is just a question, to us it is a phrase that we are humbled by.</p>
+			<h3>quoVadis</h3>
+			<p>Classical Latin:  [kʷoː waːdis]</p>
+			<div class="abouttext">
+				<p>A Latin phrase meaning "Where are you going?"</p>
+				<p>Modern usage of the phrase refers to the strength, courage, and dedication of Saint Peter and his journey to spread the message of Jesus.</p>
+				<p>To most, "where are you going?" is just a question, to us it is a phrase that we are humbled by.</p>
+			</div>
 			
 			<div id="aboutform">
 				
@@ -376,6 +423,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
 <script src="mainjs.js"></script>
+<script src="/jsjs/fixednav420.js"></script>
 <script src="/src/app.js"></script>
 <script src="/src/components/form/formCtrl.js"></script>
 <script src="/src/components/form/formServ.js"></script>

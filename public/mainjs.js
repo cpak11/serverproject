@@ -38,9 +38,10 @@ $(function(){
 	})
 
 
-	$('#menuactivate').click(function(){
+	$('#menuactivate,.closenav').click(function(){
 		$('#fixednav').toggleClass('class2act');
 	});
+	
 
 
 
@@ -53,11 +54,8 @@ $(function(){
 
 
 
-	$('.donate').on('click', function(e){
+	$('.donate').on('click', function(){
 		$('#donatemodal').fadeIn();
-		// if(e.currentTarget != $('#donatemodal')){
-		// 	$('#donatemodal').fadeOut();
-		// }
 	});
 	$('#donatefield .close').click(function(){
 		$('#donatemodal').fadeOut();

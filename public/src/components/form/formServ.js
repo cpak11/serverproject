@@ -34,7 +34,7 @@ angular.module('quovadis').service('formServ', function($http){
 	}
 	this.emailUpdate = function(eid, ee){
 		let earr = [eid, ee]
-		return $http.post('/api/updateemail/member/', earr)
+		return $http.post('/api/updateEmail/member/', earr)
 		.then( emobj => {
 			return emobj.data
 		} )
