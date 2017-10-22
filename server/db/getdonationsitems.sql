@@ -1,0 +1,1 @@
+select donation_id, donation_item, donation_item_description, member_id from qv_donations;

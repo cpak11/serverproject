@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div id="frameadmin">
+	<div id="showmembersinfo">
+		<div class="qv_members" ng-repeat="member in members" ng-hide="member.first_name == null">
+			<h4>{{member.first_name}} {{member.last_name}} | <small>id: {{member.id}}</small></h4>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

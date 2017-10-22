@@ -1,7 +1,17 @@
 /* ------------------- mediaquery ------------------- */
 @media(min-width:420px){
 
-	#fixednav{
+
+#fixednav420{
+	z-index:377;
+	position:fixed;top:0;left:0;
+	width:100%;height:75px;
+	background:rgba(100,100,100,.3);
+}
+
+
+#fixednav{display:none;}
+	/*#fixednav{
 	position:fixed;top:0;left:100vw;
 	box-sizing:border-box;
 	width:50vw;height:100vh;
@@ -13,14 +23,14 @@
 	}
 		#menuactivate{
 			z-index:210;
-			position:absolute;left:-45px;top:0;
-			width:45px;height:30px;
+			position:absolute;left:-40px;top:0;
+			width:40px;height:26px;
 			cursor:pointer;
 		}
 
 		.class2act{
 			transform: translate(-50vw);
-		}
+		}*/
 
 
 
@@ -94,6 +104,61 @@
 			dd li{padding:.5rem 0 .5rem 2.5rem;}
 
 	#framecontact button{margin-top:0;outline:none}
+	#formsignup button{margin-top:5px;}
+
+
+
+
+
+
+
+#frameadmin{
+	width:100%;
+	font-family: 'Roboto Condensed', sans-serif;
+	color:rgb(51,51,51);
+}
+	#frameadmin h3{font-size:2.7rem;}
+	#adminmembers{background:papayawhip;width:700px;}
+	#frameadmin h4{font-size:1.25rem;}
+	#frameadmin p{font-size:1rem;}
+
+
+
+	.qv_members{padding:.25rem 0 .125rem 0;border-bottom:.5px solid silver;}
+	.qv_members:last-of-type{border-bottom:none;}
+	.qv_members h4, .emailphone{
+		display:flex;justify-content:space-between;
+	}
+	.qv_members .spanid{width:5.2rem;}
+	.qv_members .spanphone{width:12.5rem;}
+
+	#frameadmin input{
+		font-size:.8rem;padding:.05rem;margin:3px 0;
+		border:.5px solid silver;border-radius:3px;
+	}
+	.inputid{width:2rem;}
+
+	#updatememberinfo input{font-size:1rem;}
+
+
+#stateda{width:100%;position:relative;}
+	#showdonationinfo{}
+	#showdonationinfo h3{text-align:center;}
+	.makeflex{display:flex;justify-content:space-around;}
+	.makeflex span{
+		padding:2px 0;
+		width:50%;background:rgb(240,240,240);
+		border:.5px solid silver;
+	}
+
+.donatedamounts{display:block;margin:0 auto;position:relative;width:125px;}
+.spanamountsid,.spanamounts{display:inline-block;}
+.spanamountsid{width:2rem;}
+.spanamounts{width:4rem;}
+
+
+
+
 
 }
 /* ------------------- end mediaquery ------------------- */

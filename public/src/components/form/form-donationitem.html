@@ -1,0 +1,6 @@
+<div class="donateditems">
+	<h4>donationed items</h4>
+	<div class="donations" ng-repeat="item in items" ng-hide="item.donation_item === null && item.donation_item_description === null">
+		<p>{{item.donation_id}} - {{item.donation_item}}: {{item.donation_item_description}}</p>
+	</div>
+</div>

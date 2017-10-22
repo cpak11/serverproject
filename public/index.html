@@ -9,11 +9,25 @@
 	<link rel="stylesheet" href="">
 	<link rel="stylesheet" href="">
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Bungee|Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Open+Sans+Condensed:300,700|Roboto+Condense:300,700|Bungee|Saira+Condensed" rel="stylesheet">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+
+
+<div id="fixednav420">
+
+	about
+
+	service/events
+
+	connect
+
+	admin?
+	
+</div>
 
 
 
@@ -32,8 +46,7 @@
 
 
 
-<div id="framemain">
-
+<div id="framemain" ng-controller="formCtrl">
 
 	<div id="frameintro">
 		<div class="whitefilter"></div>
@@ -60,14 +73,15 @@
 		</div>
 	</div>
 
-	<div id="frameverse">
+	<div id="frameverse" ng-controller="verseCtrl">
 		<div class="versetext">
-			<h3>verse 1:11</h3>
+			<h3>verse 1:11
+				{{vv.bookname}} {{vv.chapter}}
+				
+			</h3>
 			<p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend making this the first true generator on the Internet.</p>
 		</div>
 	</div>
-
-
 
 
 
@@ -78,25 +92,14 @@
 			<p>Modern usage of the phrase refers to the strength, courage, and dedication of Saint Peter and his journey to spread the message of Jesus.</p>
 			<p>To most, "where are you going?" is just a question, to us it is a phrase that we are humbled by.</p>
 			
-			<div id="aboutform">					
+			<div id="aboutform">
 				
-
-				<form>
-					<input placeholder="member id" ng-model="dm">
-
-					<button type="submit" ng-click="deletemember(dm)">delete member</button>
-				</form>
 			</div>
-
 
 			<div ui-view="about-view"></div>
 
-		</div>
-		
+		</div>		
 	</div>
-
-
-
 
 
 
@@ -181,23 +184,21 @@
 		</div>
 	</div>
 
-
-
 	<div id="framecontact">
 		<div class="cc">
 			<h1>CONNECT<br><small>with quoVadis</small></h1>
 
 			<form id="formsignup" name="newmemberform">
-				<input type="text" name="firstname" placeholder="first name" ng-model="firstname" required><br>
-				<input type="text" name="lastname" placeholder="last name (maiden name)" ng-model="lastname" required><br>
-				<input type="text" name="email" placeholder="email" ng-model="email" required><br>
-				<select name="gender" required ng-model="gender" placeholder="gender">
+				<input class="refresh" type="text" name="firstname" placeholder="first name" ng-model="firstname" required><br>
+				<input class="refresh" type="text" name="lastname" placeholder="last name (maiden name)" ng-model="lastname" required><br>
+				<input class="refresh" type="text" name="email" placeholder="email" ng-model="email" required><br>
+				<select class="refresh" name="gender" required ng-model="gender" placeholder="gender">
 					<option value="female">female</option>
 					<option value="male">male</option>
 				</select><br>
-				<input type="text" name="phonenumber" placeholder="phone number" ng-model="phonenumber"><br>
-				<p>not required</p>
-				<br>
+				<input class="refresh" type="text" name="phonenumber" placeholder="phone number" ng-model="phonenumber" required><br>
+				
+				
 				<button type="submit"
 				ng-disabled="form.$invalid"
 				ng-click="addnewmember(
@@ -206,7 +207,7 @@
 				email,
 				gender,
 				phonenumber
-				)">join us</button>
+				);">join us</button>
 			</form>
 
 			<div class="donate">
@@ -222,13 +223,76 @@
 					<h4 ui-sref="state2">donate item</h4>
 				</div>
 
-				<div ui-view="donate-view"></div>				
-
+				<div ui-view="donate-view"></div>
+				<div class="close"><h4>close</h4></div>
 			</div>
 		</div>
 
 	</div>
 
+
+	<div id="frameadmin">
+
+		<div id="showmembersinfo">
+			<h3>current members</h3>
+			<div id="adminmembers">
+				<div class="qv_members" ng-repeat="member in members" ng-hide="member.first_name == null">
+					<h4>
+						<span>{{member.first_name}} {{member.last_name}} <small> {{member.gender}}</small></span>
+						<span class="spanid">id: {{member.id}}</span>
+					</h4>
+					<p class="emailphone">
+						<span>
+							<strong>email </strong>{{member.email}}
+						</span>
+						<span class="spanphone">
+							<strong>phone </strong>{{member.phone_number}}
+						</span>
+					</p>
+				</div>
+			</div>
+			
+			<form id="updatememberinfo">
+				<input class="inputid" placeholder="id" ng-model="lnid"><input placeholder="update last name" ng-model="lnln">
+				<button type="submit" ng-click="updatelastname(lnid, lnln)"><p>update</p></button><br>
+				
+				<input class="inputid" placeholder="id" ng-model="eid"><input placeholder="update email" ng-model="ee">
+				<button type="submit" ng-click="updateemail(eid, ee)"><p>update</p></button><br>
+				
+				<input class="inputid" placeholder="id" ng-model="pnid"><input placeholder="update phone number" ng-model="pnpn">
+				<button type="submit" ng-click="updatephonenumber(pnid, pnpn)"><p>update</p></button>
+			</form>
+
+			<form>
+				<input placeholder="member id" ng-model="dm" id="destroyinput">
+				<button type="submit" ng-click="deletemember(dm);"><p>delete member</p></button>
+			</form>
+		</div>
+
+
+
+
+		<div id="showdonationinfo">
+			<h3><span>donations</span><br>
+				<small class="makeflex">
+					<span ui-sref="state1">amounts</span>
+					<span ui-sref="state2">items</span>
+				</small>
+			</h3>
+			
+			<div class="qv_donations">
+
+				<div ui-view="donationview"></div>
+
+				<form>
+					<input type="text" name="" placeholder="donation id" ng-model="delete_id">
+					<button type="submit" ng-click="deleteDonation(delete_id)"><p>delete donation</p></button>
+				</form>
+
+			</div>
+		</div>
+
+	</div>
 
 
 
@@ -309,16 +373,16 @@
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
 <script src="mainjs.js"></script>
 <script src="/src/app.js"></script>
 <script src="/src/components/form/formCtrl.js"></script>
 <script src="/src/components/form/formServ.js"></script>
-<!-- <script src="/src/components/form/form-donate.js"></script> -->
-<!-- <script src="/src/components/form/form-donateitem.js"></script> -->
 <script src="/src/components/about/aboutCtrl.js"></script>
 <script src="/src/components/about/aboutServ.js"></script>
+<script src="/src/components/verse/verseCtrl.js"></script>
+<script src="/src/components/verse/verseServ.js"></script>
 <script src="/src/directives/formDirect.js"></script>
 <script src=""></script>
 <script src=""></script>

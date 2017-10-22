@@ -1,1 +1,2 @@
-update qv_members set email = $4 where id = $1;
+update qv_members set email = $3 where id = $1
+	RETURNING *;

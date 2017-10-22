@@ -100,17 +100,82 @@ app.delete('/api/member/:id', ( req, res, next ) => {
 	.then( () => res.status(200).send() )
 	.catch( () => res.status(500).send() );
 });
-
-
-
-app.post('/api/donations', (req, res, next) => {
+app.post('/api/update/member/',(req, res, next) =>{
+	const dbInstance = req.app.get('db');	
+	dbInstance.updatelastname(req.body)
+	.then(response => {return res.json(response)})
+	.catch( () => res.status(500).send() );
+});
+app.post('/api/updateemail/member/',(req, res, next) =>{
 	const dbInstance = req.app.get('db');
-	dbInstance.adddonationitem(req.body)
+	dbInstance.updateemail(req.body)
+	.then( response => {return res.json(response)} )
+	.catch( () => res.status(500).send() );
+});
+app.post('/api/updatephone/member/',(req, res, next) =>{
+	const dbInstance = req.app.get('db');
+	dbInstance.updatephonenumber(req.body)
+	.then( response => {return res.json(response)} )
+	.catch( () => res.status(500).send() );
+});
+
+
+
+
+
+
+
+app.get('/api/donations/amounts', ( req, res, next ) => {
+	const dbInstance = req.app.get('db');
+	dbInstance.getdonationsamounts()
+	.then( amounts => res.status(200).send( amounts ) )
+	.catch( () => res.status(500).send() );
+});
+app.get('/api/donations/items', ( req, res, next ) => {
+	const dbInstance = req.app.get('db');
+	dbInstance.getdonationsitems()
+	.then( items => res.status(200).send( items ) )
+	.catch( () => res.status(500).send() );
+});
+app.post('/api/donations/amounts', (req, res, next) => {
+	const dbInstance = req.app.get('db');
+	//sql statement thzt grabs member id where member id = req.body.memberid
+	dbInstance.adddonationamount([req.body.memberid, req.body.amount])
+	.then( () => res.status(200).send('gogo') )
+	.catch( () => res.status(500).send() );
+});
+app.post('/api/donations/items', (req, res, next) => {
+	const dbInstance = req.app.get('db');
+	// ***
+	console.log(req.body)
+	dbInstance.adddonationitem([req.body.memberid, req.body.item, req.body.itemde])
+
+	.then( () => res.status(200).send('gogo') )
+	// .catch( () => res.status(500).send() );
+});
+app.delete('/api/donations/:id', ( req, res, next ) => {
+	const dbInstance = req.app.get('db');
+	const { params } = req;
+	console.log(req.params)
+	dbInstance.deletedonation([ params.id ])
 	.then( () => res.status(200).send() )
 	.catch( () => res.status(500).send() );
 });
 
 
+// *** example
+// app.post('/api/donations', (req, res, next) => {
+//   const dbInstance = req.app.get('db');
+//   dbInstance.checkMemeber(req.body.memberId).then(function(response) {
+//     if (response.length > 0) {
+//       dbInstance.addDonation([req.body.memberId, req.body.amount]).then(function(resp) {
+//         res.json('Success');
+//       });
+//     } else {
+//       res.status(401).json('No User Found');
+//     }
+//   });
+// });
 
 
 

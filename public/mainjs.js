@@ -59,6 +59,13 @@ $(function(){
 		// 	$('#donatemodal').fadeOut();
 		// }
 	});
+	$('#donatefield .close').click(function(){
+		$('#donatemodal').fadeOut();
+	})
+
+	
+
+
 	
 
 });

@@ -1,0 +1,17 @@
+<div id="stateda">
+<div class="donatedamounts">
+	<h4>donation amounts</h4>
+	<div class="donations" ng-repeat="amount in amounts" ng-hide="amount.donation_amount === null">
+		<!-- <p>
+			<span class="spanamountsid">{{amount.donation_id}}</span>
+			<span>{{amount.donation_amount}}</span>
+		</p> -->
+		<div class="spanamountsid">
+			<p>{{amount.donation_id}}</p>
+		</div>
+		<div class="spanamounts">
+			<p>{{amount.donation_amount}}</p>
+		</div>
+	</div>
+</div>
+</div>
