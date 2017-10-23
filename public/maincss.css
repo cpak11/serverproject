@@ -48,14 +48,14 @@ font-family: 'Raleway', sans-serif;}
 		#fixednav p{text-align:center;font-size:1.5rem;}
 		#fixednav p span{display:block;margin-top:10px;}
 
-	.closenav{position:absolute;bottom:10px;right:10px;border-left:3px solid darkred;padding-left:5px;}
+	.closenav{position:absolute;bottom:10px;right:15px;border-left:3px solid darkred;padding-left:5px;}
 
 	#fixednavadmin{
 		z-index:200;
 		margin-top:10px;
 	}
-		#toviewadmin p{font-size:1rem;}
-		#toviewadmin p input{width:6rem;}
+		#toviewadmin2 p{font-size:1rem;}
+		#toviewadmin2 p input{width:6rem;}
 
 
 
@@ -98,14 +98,14 @@ font-family: 'Raleway', sans-serif;}
 		font-size:3rem;line-height:45px
 	}
 	.introfooter{
-		width:100%;height:30px;position:absolute;bottom:0;left:0;
+		width:100%;height:40px;position:absolute;bottom:0;left:0;
 		background:rgb(245,245,245);z-index:20;
 	}
 		.introfooter p{position:absolute;left:50%;bottom:0;transform:translateX(-50%);}
 
 
-
-
+.mana{font-family: 'Rock Salt', cursive;}
+p.mana{font-size:.9rem;line-height:1.2rem;}
 
 
 #frameverse{
@@ -124,7 +124,7 @@ font-family: 'Raleway', sans-serif;}
 
 
 
-#frameabout{
+#frameabout{overflow-y:scroll;
 	height:100vh;
 	background:linear-gradient(180deg, rgba(180,140,130,.8), rgba(35,70,160,.6)),url(/src/media/imgs/qvcross.jpg);
 	background-size:cover;background-position:center;
@@ -137,7 +137,8 @@ font-family: 'Raleway', sans-serif;}
 	.abouttext{background:rgba(235,235,235,.6);padding:.5rem;margin-top:7px;}
 	.abouttext p{padding:.25rem 0;}
 
-
+	#aboutministry{margin-top:10px;color:white;margin-bottom:20px;}
+	#aboutministry p{padding:5px 0;}
 
 
 #frameservice{

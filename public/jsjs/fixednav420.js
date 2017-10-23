@@ -16,6 +16,7 @@ $(function(){
 		var input = $('#pwpw').val();
 		if(input === 'hellogoodbye'){
 			$('#frameadmin').fadeIn(100);
+			$('#fixednav420admin').fadeOut(500);
 		} else {
 			alert('Nope, not permitted access');
 		}

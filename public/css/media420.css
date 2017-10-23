@@ -55,8 +55,8 @@
 
 
 
-	#frameabout{
-	}
+	#frameabout{}
+		#aboutministry{position:absolute;top:0;right:10vw;margin-top:3rem;width:30vw;}
 		#aboutframe h3{font-size:4rem;}
 		#aboutframe p{font-size:1.5rem;padding:1.5rem 0;}
 		.abouttext{
@@ -92,19 +92,24 @@
 			left:50%;transform:translate(-50%,-50%);
 		}
 			.imgholder ul li span{opacity:.8;}
-			.imgholder ul li:nth-child(1) span{background:url(/src/media/imgs/qvs.jpg);}
-			.imgholder ul li:nth-child(2) span{background:url(/src/media/imgs/qvqv.jpg);}
-			.imgholder ul li:nth-child(3) span{background:url(/src/media/imgs/qqv.jpg);}
+			.imgholder ul li:nth-child(1) span{background:url(/src/media/imgs/quovadis1.jpg);background-size:cover;
+		    background-position:center;}
+			.imgholder ul li:nth-child(2) span{background:url(/src/media/imgs/quovadis2.jpg);background-size:cover;
+		    background-position:center;}
+			.imgholder ul li:nth-child(3) span{background:url(/src/media/imgs/quovadis3.jpg);background-size:cover;
+		    background-position:center;}
 		.qvtitle{
 			position:absolute;top:50%;transform:translateY(-50%);
 			font-size:10rem;line-height:140px;z-index:8;
 			color:rgba(255,255,255,.8);
 			text-shadow:1px 1px 7px rgba(70,70,70,.3);
 		}
+		
+		.introfooter p{font-size:1.2rem;}
 
 	#frameverse{padding:0 10vw;}
-		.versetext h3{font-size:3rem;}
-		.versetext p{font-size:1.5rem;}
+		.versetext h3{font-size:2.5rem;}
+		.versetext p{font-size:1.5rem;line-height:3rem;}
 
 
 
@@ -136,6 +141,7 @@
 
 
 #frameadmin{
+	position:relative;
 	width:100%;
 	font-family: 'Roboto Condensed', sans-serif;
 	color:rgb(51,51,51);
@@ -145,7 +151,7 @@
 	#frameadmin h4{font-size:1.25rem;}
 	#frameadmin p{font-size:1rem;}
 
-
+	
 
 	.qv_members{padding:.25rem 0 .125rem 0;border-bottom:.5px solid silver;}
 	.qv_members:last-of-type{border-bottom:none;}
@@ -180,7 +186,13 @@
 .spanamounts{width:4rem;}
 
 
-
+#showmemberinfo,#showdonationinfo{
+		display:inline-block;
+		width:45vw;
+		position:absolute;top:0;
+	}
+	#showmemberinfo{left:0;}
+	#showdonationinfo{right:0;}
 
 
 }

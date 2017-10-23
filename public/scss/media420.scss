@@ -1,0 +1,346 @@
+/* ------------------- mediaquery ------------------- */
+@media (min-width: 420px) {
+  .abmid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #fixednav420 {
+    display: block;
+    z-index: 377;
+    position: fixed;
+    top: -75px;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: rgba(230, 230, 230, 0.6);
+    font-family: 'Roboto Mono',monospace;
+    transition: transform 300ms ease;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  #fixednav420arrow {
+    z-index: 377;
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    background: rgba(230, 230, 230, 0.6);
+    width: 50px;
+    height: 40px;
+    svg {
+      margin: -20px 0 0 -15px;
+    }
+  }
+  /*#fixednav420arrow svg{transform:rotate(180deg);}*/
+  .fn420active {
+    transform: translateY(75px);
+  }
+  #fixednav420arrow svg {
+    transition: transform 300ms ease;
+  }
+  .fn420arrowactive {
+    transform: rotate(180deg);
+  }
+  .linktext {
+    p {
+      color: gray;
+    }
+    span {
+      margin: 0 5px;
+    }
+  }
+  .adminlink {
+    color: black;
+    background: rgba(205, 15, 15, 0.4);
+    padding: 0 5px;
+    &:hover {
+      color: white;
+    }
+  }
+  #fixednav420admin {
+    display: none;
+    z-index: 377;
+    background: rgba(230, 230, 230, 0.6);
+    width: 330px;
+    height: 40px;
+    padding-left: 5px;
+    position: absolute;
+    top: 75px;
+    right: 50px;
+    input {
+      font-size: 1.2rem;
+      width: 6rem;
+    }
+  }
+  #fixednav {
+    display: none;
+  }
+  #frameabout {}
+  #aboutministry {
+    position: absolute;
+    top: 0;
+    right: 10vw;
+    margin-top: 3rem;
+    width: 30vw;
+  }
+  #aboutframe {
+    h3 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.5rem;
+      padding: 1.5rem 0;
+    }
+  }
+  .abouttext {
+    width: 450px;
+    background: rgba(235, 235, 235, 0.6);
+    padding: 1.5rem;
+    margin-top: 7px;
+  }
+  .whitefilter {
+    display: none;
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(235, 235, 235, 0.5);
+  }
+  .whereareyou {
+    font-size: 8.5rem;
+    font-family: 'Roboto Mono',monospace;
+    line-height: 170px;
+    letter-spacing: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(45, 45, 45, 0.6);
+    z-index: 7;
+  }
+  .wherecolor {
+    color: rgba(205, 5, 15, 0.6);
+  }
+  .fillerheight {
+    height: 0;
+  }
+  .letteranimate {
+    transition: color 100ms ease-out,transform 200ms ease-in;
+  }
+  .triggerletteranimate {
+    color: rgba(205, 5, 15, 0.7);
+    transform: translateY(-1.7rem);
+  }
+  .imgholder {
+    width: 500px;
+    height: 650px;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ul li {
+      span {
+        opacity: .8;
+      }
+      &:nth-child(1) span {
+        background: url(/src/media/imgs/quovadis1.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      &:nth-child(2) span {
+        background: url(/src/media/imgs/quovadis2.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      &:nth-child(3) span {
+        background: url(/src/media/imgs/quovadis3.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+  .qvtitle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10rem;
+    line-height: 140px;
+    z-index: 8;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 1px 1px 7px rgba(70, 70, 70, 0.3);
+  }
+  .introfooter p {
+    font-size: 1.2rem;
+  }
+  #frameverse {
+    padding: 0 10vw;
+  }
+  .versetext {
+    h3 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 3rem;
+    }
+  }
+  .cc {
+    width: 400px;
+    top: 50%;
+    left: 10vw;
+    transform: translate(0, -50%);
+  }
+  #scheduledevents {
+    background: rgba(245, 245, 245, 0.6);
+    position: absolute;
+    top: 3rem;
+    right: 10vw;
+    bottom: 3rem;
+    left: 10vw;
+    overflow: hidden;
+  }
+  .inner {
+    display: inline-block;
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #scheduledevents {
+    h3 {
+      font-size: 2.5rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  dt {
+    padding: 1rem 0;
+  }
+  dd li {
+    padding: .5rem 0 .5rem 2.5rem;
+  }
+  #framecontact button {
+    margin-top: 0;
+    outline: none;
+  }
+  #formsignup button {
+    margin-top: 5px;
+  }
+  #frameadmin {
+    position: relative;
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(51, 51, 51);
+    h3 {
+      font-size: 2.7rem;
+    }
+  }
+  #adminmembers {
+    background: papayawhip;
+    width: 700px;
+  }
+  #frameadmin {
+    h4 {
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .qv_members {
+    padding: .25rem 0 .125rem 0;
+    border-bottom: .5px solid silver;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    h4 {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .emailphone {
+    display: flex;
+    justify-content: space-between;
+  }
+  .qv_members {
+    .spanid {
+      width: 5.2rem;
+    }
+    .spanphone {
+      width: 12.5rem;
+    }
+  }
+  #frameadmin input {
+    font-size: .8rem;
+    padding: .05rem;
+    margin: 3px 0;
+    border: .5px solid silver;
+    border-radius: 3px;
+  }
+  .inputid {
+    width: 2rem;
+  }
+  #updatememberinfo input {
+    font-size: 1rem;
+  }
+  #stateda {
+    width: 100%;
+    position: relative;
+  }
+  #showdonationinfo {
+    width: 70vw;
+    margin: 0 auto;
+    h3 {
+      text-align: center;
+    }
+  }
+  .makeflex {
+    display: flex;
+    justify-content: space-around;
+    span {
+      padding: 2px 0;
+      width: 50%;
+      background: rgb(240, 240, 240);
+      border: .5px solid silver;
+    }
+  }
+  .donatedamounts {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 125px;
+  }
+  .spanamountsid, .spanamounts {
+    display: inline-block;
+  }
+  .spanamountsid {
+    width: 2rem;
+  }
+  .spanamounts {
+    width: 4rem;
+  }
+  #showmemberinfo, #showdonationinfo {
+    display: inline-block;
+    width: 45vw;
+    position: absolute;
+    top: 0;
+  }
+  #showmemberinfo {
+    left: 0;
+  }
+  #showdonationinfo {
+    right: 0;
+  }
+}
+
+/* ------------------- end mediaquery ------------------- */

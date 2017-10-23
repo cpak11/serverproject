@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="">
 	<link rel="stylesheet" href="">
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Open+Sans+Condensed:300,700|Roboto+Condense:300,700|Bungee|Saira+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Open+Sans+Condensed:300,700|Roboto+Condense:300,700|Bungee|Rock+Salt|Saira+Condensed" rel="stylesheet">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -107,9 +107,9 @@
 	<div id="frameintro">
 		<div class="whitefilter"></div>
 		<h1 class="whereareyou">
-			<span class="letteranimate ih11">w</span>here<br>
-			a<span class="letteranimate ih22">r</span>e<br>
-			&nbspyo<span class="letteranimate ih33">u</span><br><div class="fillerheight"></div>
+			<span class="letteranimate ih11"><a href="#frameverse" target="_self">w</a></span>here<br>
+			a<span class="letteranimate ih22"><a href="#frameservice" target="_self">r</a></span>e<br>
+			&nbspyo<span class="letteranimate ih33"><a href="#framecontact" target="_self">u</a></span><br><div class="fillerheight"></div>
 			<span class="wherecolor">going...?</span>
 		</h1>
 
@@ -125,17 +125,14 @@
 		</div>
 
 		<div class="introfooter">
-			<p>mana</p>
+			<p class="mana">Daily Mana</p>
 		</div>
 	</div>
 
 	<div id="frameverse" ng-controller="verseCtrl">
 		<div class="versetext">
-			<h3>verse 1:11
-				{{vv.bookname}} {{vv.chapter}}
-				
-			</h3>
-			<p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend making this the first true generator on the Internet.</p>
+			<h3 class="mana">John 13:36</h3>
+			<p class="mana">Simon Peter said to him, “Lord, where are you going?” Jesus answered him, “Where I am going you cannot follow me now, but you will follow afterward.”</p>
 		</div>
 	</div>
 
@@ -150,13 +147,14 @@
 				<p>Modern usage of the phrase refers to the strength, courage, and dedication of Saint Peter and his journey to spread the message of Jesus.</p>
 				<p>To most, "where are you going?" is just a question, to us it is a phrase that we are humbled by.</p>
 			</div>
-			
-			<div id="aboutform">
-				
+
+			<div id="aboutministry">
+				<h3>Our Ministry</h3>
+				<p>It is not by deeds that will determine if we go the Heaven, it's what resides in our heart.</p>
+				<p>Quo Vadis, a simple question with deep meaning. A phrase that serves as a reminder and motivation in our daily lives.</p>
+				<p>Even amongst ourselves there are differences. It is the simple wish of this ministry to do what little we can to speak with each other and create a forum of growth and understanding.</p>
+				<p>To you, Quo Vadis may only serve as a simple phrase; to us it is a life style and choice. We invite you to be apart/experience Quo Vadis. You may find that a simple phrase may actually have bigger meaning in your life.</p>
 			</div>
-
-			<div ui-view="about-view"></div>
-
 		</div>		
 	</div>
 
