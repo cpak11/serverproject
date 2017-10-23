@@ -50,7 +50,12 @@ font-family: 'Raleway', sans-serif;}
 
 	.closenav{position:absolute;bottom:10px;right:10px;border-left:3px solid darkred;padding-left:5px;}
 
-	
+	#fixednavadmin{
+		z-index:200;
+		margin-top:10px;
+	}
+		#toviewadmin p{font-size:1rem;}
+		#toviewadmin p input{width:6rem;}
 
 
 

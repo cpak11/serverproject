@@ -26,10 +26,12 @@
 	</div>
 
 	<div id="fixednav420admin">
-		<p>
-			password: <input id="pwpw" type="password" name="">
-			<button type="submit" ng-click="showframeadmin()">submit</button>
-		</p>
+		<form id="toviewadmin">
+			<p>
+				password: <input id="pwpw" type="password" name="">
+				<button type="submit">submit</button>
+			</p>
+		</form>
 
 	</div>
 
@@ -82,6 +84,16 @@
 
 			<span class="adminlink">admin?</span>
 		</p>
+	</div>
+
+	<div id="fixednavadmin2">
+		<form id="toviewadmin2">
+			<p>
+				password:<br><input id="pwpw2" type="password" name=""><br>
+				<button type="submit">submit</button>
+			</p>
+		</form>
+
 	</div>
 
 </nav>
@@ -343,76 +355,6 @@
 
 
 
-
-	<!-- <div id="frameintro">
-		<ul class="cb-slideshow">
-			<li>
-				<span>Image 01</span>
-				<div>
-					<h3></h3>
-				</div>
-			</li>
-			<li>
-				<span>Image 01</span>
-				<div>
-					<h3></h3>
-				</div>
-			</li>
-			<li>
-				<span>Image 01</span>
-				<div>
-					<h3></h3>
-				</div>
-			</li>
-			<li>
-				<span>Image 01</span>
-				<div>
-					<h3></h3>
-				</div>
-			</li>
-			<li>
-				<span>Image 01</span>
-				<div>
-					<h3></h3>
-				</div>
-			</li>
-			<li>
-				<span>Image 01</span>
-				<div>
-					<h3></h3>
-				</div>
-			</li>
-		</ul>
-	</div> -->
-	<!-- <footer ng-controller="formCtrl">
-		<div ui-view></div>
-
-		<form id="formsignup" name="newmemberform">
-			<input type="text" name="firstname" placeholder="first name" ng-model="firstname" required><br>
-			<input type="text" name="lastname" placeholder="last name" ng-model="lastname" required><br>
-			<input type="text" name="email" placeholder="email" ng-model="email" required><br>
-			<select name="gender" required ng-model="gender" placeholder="gender">
-				<option value="female">female</option>
-				<option value="male">male</option>
-			</select><br>
-			<input type="text" name="phonenumber" placeholder="phone number" ng-model="phonenumber" required><br>
-			<button type="submit"
-			ng-disabled="form.$invalid"
-			ng-click="addnewmember(
-			firstname,
-			lastname,
-			email,
-			gender,
-			phonenumber
-			)">add new member</button>
-		</form>
-
-		<form>
-			<input placeholder="member id" ng-model="dm">
-
-			<button type="submit" ng-click="deletemember(dm)">delete member</button>
-		</form>
-	</footer> -->
 	
 </div>
 	

@@ -63,7 +63,15 @@ $(function(){
 
 	
 
-
+	$('#toviewadmin2').submit(function(e){
+		e.preventDefault();
+		var input = $('#pwpw2').val();
+		if(input === 'hellogoodbye'){
+			$('#frameadmin').fadeIn(100);
+		} else {
+			alert('Nope, not permitted access');
+		}
+	});
 	
 
 });

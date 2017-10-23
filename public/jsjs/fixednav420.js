@@ -11,8 +11,14 @@ $(function(){
 		$('#fixednav420admin').fadeToggle();
 	});
 
-	if( $('#pwpw').val() === 'hellogoodbye' ){
-		$('#frameadmin').show();
-	}
+	$('#toviewadmin').submit(function(e){
+		e.preventDefault();
+		var input = $('#pwpw').val();
+		if(input === 'hellogoodbye'){
+			$('#frameadmin').fadeIn(100);
+		} else {
+			alert('Nope, not permitted access');
+		}
+	});
 
 });

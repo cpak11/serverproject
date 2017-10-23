@@ -1,8 +1,8 @@
 <div id="statedi">
 <div class="donateinputs">
-	<input type="" name="" placeholder="member id#" ng-model="di.memberid"><br>
-	<input type="" name="" placeholder="donation item" ng-model="di.item"><br>
-	<textarea placeholder="item description" ng-model="di.itemde"></textarea><br>
-	<button type="submit" ng-click="addDonationItem(di)">donate item</button>
+	<input data-ng-model="searchA" placeholder="member id#" ng-model="di.memberid"><br>
+	<input data-ng-model="searchA" placeholder="donation item" ng-model="di.item"><br>
+	<textarea data-ng-model="searchA" placeholder="item description" ng-model="di.itemde"></textarea><br>
+	<button type="submit" ng-click="addDonationItem(di)" data-ng-click="searchA=null">donate item</button>
 </div>
 </div>
